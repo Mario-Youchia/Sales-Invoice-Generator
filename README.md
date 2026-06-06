@@ -1,6 +1,6 @@
 # Sales Invoice Generator
 
-Sales Invoice Generator is a Java Swing desktop application for creating, loading, editing, calculating, saving, deleting, and exporting sales invoices. The application stores invoice summaries and invoice details in Excel workbooks and uses Apache POI for `.xlsx` workbook handling.
+Sales Invoice Generator is a Java Swing desktop application to generate, load, edit, calculate, save, delete and export sales invoice. The application stores invoice data in Excel workbooks and uses Apache POI to work with `.xlsx` files.
 
 ## Preview
 
@@ -10,7 +10,7 @@ The main interface shows the loaded invoices table on the left and the invoice e
 
 ![Invoice entry workflow](public/images/projects/sales-invoice-generator/sales-invoice-generator-invoice-entry.png)
 
-The invoice form supports customer information, invoice date entry, item names, item prices, and item counts.
+The invoice form has fields to enter customer information, date of invoice, item names, item prices and item counts.
 
 ![Calculated invoice totals](public/images/projects/sales-invoice-generator/sales-invoice-generator-calculated-invoice.png)
 
@@ -33,10 +33,9 @@ A shortcuts dialog lists keyboard commands for common actions.
 * Java Swing desktop graphical interface
 * Invoice creation, editing, loading, saving, updating, deletion, and export
 * Invoice summary table and invoice item table
-* Automatic item-total and invoice-total calculation
-* Excel workbook persistence using Apache POI
-* Separate saved-invoice workbook export
-* Invoice-number tracking through a local text file
+* Automatic sales invoice calculation
+* Excel workbook processing using Apache POI
+* Export saved-invoice as a separate excel file
 * Keyboard shortcuts for common application actions
 * Basic validation for invoice dates, customer names, item prices, and item counts
 
@@ -44,9 +43,9 @@ A shortcuts dialog lists keyboard commands for common actions.
 
 The project is organized as a Java desktop application with separate view, controller, model, and shared-state classes. The Swing interface is built manually with `JFrame`, `JPanel`, `JTable`, `JScrollPane`, `JButton`, `JTextField`, menus, dialogs, and keyboard shortcuts.
 
-The controller handles file operations and Excel workbook updates. It reads and writes invoice summaries, invoice details, and separately exported invoices using Apache POI. The model contains helper methods for clearing the invoice form, validating dates and names, validating numeric inputs, and updating the current invoice number.
+The controller manages file operations and updates Excel workbooks. It reads and writes invoice summaries, invoice details and separately exported invoices using Apache POI. The model has helper methods for clearing the invoice form, validating dates and names, validating numeric inputs, and updating the current invoice number.
 
-The application keeps its workbook files in the project root because the original implementation reads and writes files relative to the working directory.
+The application keeps its workbook files in the project root.
 
 ## How to Run
 
@@ -85,4 +84,4 @@ pom.xml                             Maven configuration
 
 ## Limitations
 
-This is a standalone desktop invoice-management project based on local Excel workbook persistence. It is not a database-backed accounting system, and it is not intended to be a production invoice-management product.
+This is a simple desktop invoice management project based on local Excel workbooks, it is not using a backend databse, and it is not intended to be a practical invoice management product.
