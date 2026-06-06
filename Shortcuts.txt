@@ -1,0 +1,11 @@
+Ctrl + u 				=> 		update
+Ctrl + o 				=> 		Load
+Ctrl + Shift + s 			=> 		save file
+Ctrl + Shift + c 			=> 		create new invoice
+Delete 					=>	 	delete invoice
+Ctrl + Shift + a 			=> 		add
+Ctrl + s 				=> 		save
+Esc 					=> 		cancel
+Shift + c 				=> 		clear
+Ctrl + Alt + c 				=> 		Calculate
+Shift + Esc 				=> 		close
